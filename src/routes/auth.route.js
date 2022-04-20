@@ -7,8 +7,8 @@ const { body, validationResult } = require('express-validator');
 
 const router = express.Router();
 
-// candidato@diwe.com.br
-// candidato#challenge
+// email
+// senha encriptada com bcrypt no db
 router.post(
   '/login',
   body('email').notEmpty().isEmail().normalizeEmail(),
